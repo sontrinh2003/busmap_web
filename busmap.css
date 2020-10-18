@@ -84,7 +84,7 @@ div#sidebar
     z-index: 2;
     bottom: 0;
     top: 0;
-    font-size: inherit;
+    font-size: 100%;
     background-color: rgb(0, 112, 200);
 }
 
