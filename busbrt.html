@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+    <head>
+        <title>
+            Tuyến BRT01
+        </title>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="busmap.css">    
+
+        <script src="busbrt/audiosource_busbrt.js"></script>
+        <script src="busmap.js"></script> 
+    </head>
+    <body>
+        <header>
+            <p>Tuyến BRT01. Bến xe Yên Nghĩa - Kim Mã</p>
+        </header>
+        
+        <div id="sidebar">
+            <h5>Các tuyến xe buýt</h5>
+            <ul class="busroutes">
+                <li>
+                    <a href="bus02.html">Tuyến 02. Bác Cổ - BX Yên Nghĩa</a>
+                </li>
+                <li>
+                    <a href="bus22c_di.html">Tuyến 22C. BX Giáp Bát - KĐT Dương Nội</a>
+                </li>
+                <li>
+                    <a href="busbrt.html">Tuyến BRT01. BX Yên Nghĩa - Kim Mã</a>
+                </li>
+                <li>
+                    <a href="buscitytour.html">Tuyến Hanoi City Tour: Bờ Hồ - Bờ Hồ</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <nav> <a href="index.html">Trang chủ</a> > Tuyến BRT01</nav>
+        
+            <h2>Tuyến BRT01: Bến xe Yên Nghĩa - Kim Mã</h2>
+    
+            <div>
+                <div class="routeinfo">
+                    <p>Đơn vị chủ quản: Xí nghiệp xe buýt nhanh BRT Hà Nội</p>
+                    <p>Thời gian hoạt động: 5h00 - 22h30</p>
+                    <p>Tần suất: 5 - 10 - 15 phút/chuyến</p>
+                    <p>Giá vé: 7.000 đồng/hành khách/lượt</p>
+                    <p>Số xe vận doanh: 29/32 xe</p>
+
+                    <button onclick="selectdepart()" id="departbutt">Chiều đi</button>
+                    <button onclick="selectreturn()" id="returnbutt">Chiều về</button>
+
+                    <p class="lotrinh depart">
+                        Lộ trình: Bến xe Yên Nghĩa (Quảng trường bến xe Yên Nghĩa) - Quốc lộ 6 - Ba La - Quang Trung (Hà Đông) - Lê Trọng Tấn - Tố Hữu - Lê Văn Lương - Láng Hạ - Giảng Võ - Giang Văn Minh - Kim Mã (Số 1 Kim Mã).
+                    </p>
+
+                    <p class="lotrinh return">
+                        Lộ trình: Kim Mã (Số 1 Kim Mã) - Giảng Võ - Láng Hạ - Lê Văn Lương - Tố Hữu - Lê Trọng Tấn - Quang Trung (Hà Đông) - Ba La - Quốc lộ 6 - Bến xe Yên Nghĩa (Quảng trường bến xe Yên Nghĩa).
+                    </p>
+
+                    <p style="font-weight: bold;">Danh sách điểm dừng:</p>
+                </div>
+                
+                <div>
+                    <img class="image" src="busbrt/busbrt.jpg" alt="Bus 02">
+                </div>
+            </div>
+    
+            <div class="table depart">
+                <table class="depart">
+                    <tr>
+                        <th style="width: 5%; text-align: center;">STT</th>
+                        <th style="width: 45%; text-align: center;">Điểm dừng chiều Bến xe Yên Nghĩa - Kim Mã</th>
+                        <th style="width: 15%; font-size: inherit; text-align: center;">Âm thanh đọc điểm dừng</th>
+                        <th style="width: 35%; text-align: center;">Tuyến kết nối tại điểm dừng</th>
+                    </tr>
+                    
+                    <tr>
+                        <td class="stt">1</td>
+                        <td class="stops alert alert-danger">Điểm đầu Bến xe Yên Nghĩa</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(0)"> </td>
+                        <td class="connectingroutes">01, 02, 21A, 27, 37, 57, 62, 72, 89, 91, 102, CNG02, CNG07</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">2</td>
+                        <td class="stops alert alert-info">Ba La - Trường Trung Cấp Y Dược Hà Nội</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(1)"> </td>
+                        <td class="connectingroutes">01, 02, 21A, 27, 33, 37, 57, 62, 89, CNG02</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">3</td>
+                        <td class="stops alert alert-info">Văn La - Trường THPT chuyên Nguyễn Huệ</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(2)"> </td>
+                        <td class="connectingroutes">01, 02, 21A, 27, 33, 37, 57, 62, 89, CNG02</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">4</td>
+                        <td class="stops alert alert-info">Văn Phú - Ngã 3 Lê Trọng Tấn - Quang Trung</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(3)"> </td>
+                        <td class="connectingroutes">105</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">5</td>
+                        <td class="stops alert alert-info">La Khê - UBND Phường La Khê</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(4)"> </td>
+                        <td class="connectingroutes">105</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">6</td>
+                        <td class="stops alert alert-info">KĐT Parkcity  - Khu Giếng Sen</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(5)"> </td>
+                        <td class="connectingroutes">105</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">7</td>
+                        <td class="stops alert alert-info">Cầu La Khê - Ngã 3 Tố Hữu - Lý Tự Trọng.</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(6)"> </td>
+                        <td class="connectingroutes">19, 22C</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">8</td>
+                        <td class="stops alert alert-info">An Hưng - KĐT An Hưng</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(7)"> </td>
+                        <td class="connectingroutes">19, 22C</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">9</td>
+                        <td class="stops alert alert-info">Văn Khê - KĐT Dương Nội</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(8)"> </td>
+                        <td class="connectingroutes">19, 22C</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">10</td>
+                        <td class="stops alert alert-info">Dương Nội - Trường Quốc Tế Nhật Bản</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(9)"> </td>
+                        <td class="connectingroutes">19, 22C</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">11</td>
+                        <td class="stops alert alert-info">Vạn Phúc 1 - Ngã tư Vạn Phúc - Tố Hữu</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(10)"> </td>
+                        <td class="connectingroutes">19, 22C</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">12</td>
+                        <td class="stops alert alert-info">Vạn Phúc 2 - Làng Nghề Vạn Phúc</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(11)"> </td>
+                        <td class="connectingroutes">33</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">13</td>
+                        <td class="stops alert alert-info">Mỗ Lao - Ngã 3 Trần Phú - Tố Hữu</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(12)"> </td>
+                        <td class="connectingroutes">33, 85, 103A, 103B</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">14</td>
+                        <td class="stops alert alert-info">Trung Văn - UBND Phường Trung Văn</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(13)"> </td>
+                        <td class="connectingroutes">33, 85, 103A, 103B</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">15</td>
+                        <td class="stops alert alert-info">Lương Thế Vinh - Bệnh Viện Y Học Cổ truyền</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(14)"> </td>
+                        <td class="connectingroutes">85, 103A, 103B</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">16</td>
+                        <td class="stops alert alert-info">Khuất Duy Tiến - Trường Đại Học PCCC</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(15)"> </td>
+                        <td class="connectingroutes">85, 103A, 103B</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">17</td>
+                        <td class="stops alert alert-info">Nguyễn Tuân - Trường Tiểu học song ngữ Brendon</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(16)"> </td>
+                        <td class="connectingroutes">29, 30, 44, 60A, 60B, 105</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">18</td>
+                        <td class="stops alert alert-info">Hoàng Đạo Thúy - KĐT Trung Hòa Nhân Chính</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(17)"> </td>
+                        <td class="connectingroutes">30, 84</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">19</td>
+                        <td class="stops alert alert-info">Vũ Ngọc Phan - Viện công nghệ xạ hiếm</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(18)"> </td>
+                        <td class="connectingroutes">09B, 09BCT, 30, 50</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">20</td>
+                        <td class="stops alert alert-info">Thành Công - Trung Tâm Chiếu Phim Quốc Gia</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(19)"> </td>
+                        <td class="connectingroutes">18</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">21</td>
+                        <td class="stops alert alert-info">Giảng Võ - Triển lãm Giảng Võ</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(20)"> </td>
+                        <td class="connectingroutes">18, 23</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">22</td>
+                        <td class="stops alert alert-info">Núi Trúc - Trường ĐH Y tế Công cộng - Bộ Y Tế</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(21)"> </td>
+                        <td class="connectingroutes">18, 23, 25, 38, 90, 107</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">23</td>
+                        <td class="stops alert alert-danger">Điểm cuối Tòa nhà PTA số 1 Kim Mã</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(22)"> </td>
+                        <td class="connectingroutes">18, 22A, 23, 25, 32, 34, 38, 50, 99, 107, CNG03</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="table return">
+                <table>
+                    <tr>
+                        <th style="width: 5%; text-align: center;">STT</th>
+                        <th style="width: 45%; text-align: center;">Điểm dừng chiều Kim Mã -Bến xe Yên Nghĩa</th>
+                        <th style="width: 15%; font-size: inherit; text-align: center;">Âm thanh đọc điểm dừng</th>
+                        <th style="width: 35%; text-align: center;">Tuyến kết nối tại điểm dừng</th>
+                    </tr>
+                    
+                    <tr>
+                        <td class="stt">1</td>
+                        <td class="stops alert alert-danger">Điểm đầu Tòa nhà PTA số 1 Kim Mã</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(39)"> </td>
+                        <td class="connectingroutes">18, 22A, 23, 25, 32, 34, 38, 50, 99, 107, CNG03</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">2</td>
+                        <td class="stops alert alert-info">Trường Trung cấp Kinh tế - Tài chính Hà Nội</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(40)"> </td>
+                        <td class="connectingroutes">01, 21A, 27, 37, 57, 62, 89, 91, CNG02</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">3</td>
+                        <td class="stops alert alert-info">Đối diện Nissan Hà Đông</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(41)"> </td>
+                        <td class="connectingroutes">01, 21A, 27, 37, 57, 62, 89, 91, CNG02</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">4</td>
+                        <td class="stops alert alert-info">Số 807 Quang Trung (Hà Đông)</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(42)"> </td>
+                        <td class="connectingroutes">01, 21A, 27, 33, 37, 57, 62, 89, BRT01, CNG02</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">5</td>
+                        <td class="stops alert alert-info">Số 707-709 Quang Trung (Hà Đông)</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(43)"> </td>
+                        <td class="connectingroutes">01, 21A, 27, 33, 37, 57, 62, 89, BRT01, CNG02</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">6</td>
+                        <td class="stops alert alert-info">Số 521 Quang Trung (Hà Đông), gần KĐT Văn Phú</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(44)"> </td>
+                        <td class="connectingroutes">01, 21A, 27, 33, 37, 57, 62, 89, 105</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">7</td>
+                        <td class="stops alert alert-info">Đối diện đường vào chợ La Khê</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(45)"> </td>
+                        <td class="connectingroutes">01, 21A, 27, 33, 37, 57, 62, 89, 105</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">8</td>
+                        <td class="stops alert alert-info">Số 267 Quang Trung (Hà Đông), đối diện Nhà thi đấu Hà Đông</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(46)"> </td>
+                        <td class="connectingroutes">01, 21A, 27, 33, 57, 89</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">9</td>
+                        <td class="stops alert alert-info">Số 85 Quang Trung (Hà Đông), Đình Cầu Đơ</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(47)"> </td>
+                        <td class="connectingroutes">01, 21A, 27, 33, 57, 89</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">10</td>
+                        <td class="stops alert alert-info">Số 15 Quang Trung (Hà Đông), đối diện Bưu điện Hà Đông</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(48)"> </td>
+                        <td class="connectingroutes">01, 21A, 27, 33, 57, 68, 89</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">11</td>
+                        <td class="stops alert alert-info">Số 1 Trần Phú (Hà Đông) - Sở Tư pháp Hà Nội</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(49)"> </td>
+                        <td class="connectingroutes">01, 19, 21A, 22B, 22C, 27, 68, 103A, 103B, 105, 106</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">12</td>
+                        <td class="stops alert alert-info">Siêu thị Nguyễn Kim – Qua ngã 3 Nguyễn Khuyến – Trần Phú (Hà Đông)</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(50)"> </td>
+                        <td class="connectingroutes">01, 19, 21A, 22B, 22C, 27, 39, 85, 103A, 103B, 105</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">13</td>
+                        <td class="stops alert alert-info">Đại học Kiến Trúc – Trần Phú (Hà Đông)</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(51)"> </td>
+                        <td class="connectingroutes">01, 19, 21A, 22B, 22C, 27, 39, 68, 103A, 103B, 105</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">14</td>
+                        <td class="stops alert alert-info">Học viện An ninh Nhân dân – Trần Phú (Hà Đông)</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(52)"> </td>
+                        <td class="connectingroutes">01, 19, 21A, 22B, 22C, 27, 39, 105</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">15</td>
+                        <td class="stops alert alert-info">Trước số nhà 521A - 521C Nguyễn Trãi</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(53)"> </td>
+                        <td class="connectingroutes">01, 19, 21A, 22B, 22C, 27, 39, 105</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">16</td>
+                        <td class="stops alert alert-info">Tổng Công ty xây dựng Sông Đà - 493 Nguyễn Trãi</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(54)"> </td>
+                        <td class="connectingroutes">01, 19, 21A, 22B, 22C, 27, 39, 68, 105</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">17</td>
+                        <td class="stops alert alert-info">Số 477 Nguyễn Trãi - Học viện Khoa học Xã hội</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(55)"> </td>
+                        <td class="connectingroutes">01, 19, 21A, 22B, 22C, 27, 39, 105</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">18</td>
+                        <td class="stops alert alert-info">Số 277 Nguyễn Trãi - Bách hóa giày Thượng Đình</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(56)"> </td>
+                        <td class="connectingroutes">01, 05, 19, 21A, 21B, 27, 29, 60A, 60B, 105, CNG05</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">19</td>
+                        <td class="stops alert alert-info">Số 235 Nguyễn Trãi - Công ty thuốc lá Thăng Long</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(57)"> </td>
+                        <td class="connectingroutes">01, 05, 19, 21A, 21B, 27, 44, 60B, 68, CNG05</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">20</td>
+                        <td class="stops alert alert-info">Số 185A Nguyễn Trãi - Ngã 3 Kim Giang</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(58)"> </td>
+                        <td class="connectingroutes">01, 19, 21A, 21B, 27, 44, CNG05</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">21</td>
+                        <td class="stops alert alert-info">Số 129 Nguyễn Trãi - Sân vận động Thượng Đình</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(59)"> </td>
+                        <td class="connectingroutes">01, 19, 21A, 21B, 27, 44, 68, 104, CNG05</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">22</td>
+                        <td class="stops alert alert-info">Số 175 Tây Sơn - Đại học Thuỷ Lợi</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(60)"> </td>
+                        <td class="connectingroutes">01, 09B, 21A, 21B, 18, 44, 51, 84, 09BCT</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">23</td>
+                        <td class="stops alert alert-danger">Điểm cuối Bến xe Yên Nghĩa</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(61)"> </td>
+                        <td class="connectingroutes">01, 02, 21A, 27, 37, 57, 62, 72, 89, 91, 102, CNG02, CNG07</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

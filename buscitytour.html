@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+    <head>
+        <title>
+            Tuyến Hanoi City Tour
+        </title>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="busmap.css">    
+
+        <script src="buscitytour/audiosource_buscitytour.js"></script>
+        <script src="busmap.js"></script> 
+    </head>
+    <body>
+        <header>
+            <p>Tuyến Hanoi City Tour Hop on - Hop off</p>
+        </header>
+        
+        <div id="sidebar">
+            <h5>Các tuyến xe buýt</h5>
+            <ul class="busroutes">
+                <li>
+                    <a href="bus02.html">Tuyến 02. Bác Cổ - BX Yên Nghĩa</a>
+                </li>
+                <li>
+                    <a href="#">Tuyến 22C. BX Giáp Bát - KĐT Dương Nội</a>
+                </li>
+                <li>
+                    <a href="busbrt.html">Tuyến BRT01. BX Yên Nghĩa - Kim Mã</a>
+                </li>
+                <li>
+                    <a href="buscitytour.html">Tuyến Hanoi City Tour: Bờ Hồ - Bờ Hồ</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <nav> <a href="index.html">Trang chủ</a> > Tuyến Hanoi City Tour</nav>
+        
+            <h2>Tuyến Hanoi City Tour: Bờ Hồ - Bờ Hồ</h2>
+    
+            <div>
+                <div class="routeinfo">
+                    <p>Đơn vị chủ quản: Xí nghiệp xe buýt Yên Viên</p>
+                    <p>Thời gian hoạt động: 9h00 - 17h30</p>
+                    <p>Tần suất: 30 phút/chuyến</p>
+                    <p>Số xe vận doanh: 3/3 xe</p>
+                    <table id="price">
+                        <tr>
+                            <th style="width: 200px; text-align: center;">Giá vé</th>
+                            <th style="width: 190px; text-align: center;">Thời gian có hiệu lực</th>
+                        </tr>
+                        <tr>
+                            <td>196.000 đồng/hành khách</td>
+                            <td style="text-align: center;">2h, không dừng</td>
+                        </tr>
+                        <tr>
+                            <td>300.000 đồng/hành khách</td>
+                            <td style="text-align: center;">4h</td>
+                        </tr>
+                        <tr>
+                            <td>450.000 đồng/hành khách</td>
+                            <td style="text-align: center;">24h</td>
+                        </tr>
+                        <tr>
+                            <td>650.000 đồng/hành khách</td>
+                            <td style="text-align: center;">48h</td>
+                        </tr>
+                    </table>
+
+                    <p class="lotrinh">
+                        Lộ trình: Quảng trường Đông Kinh Nghĩa Thục, Nhà thờ Thánh Giuse, Cột Cờ Hà Nội, Lăng Chủ tịch Hồ Chí Minh, Đền Quán Thánh, Chùa Trấn Quốc, Nhà thờ Cửa Bắc, Hoàng thành Thăng Long, Văn Miếu Quốc Tử Giám, Nhà tù Hoả Lò, Bảo tàng Phụ nữ Việt Nam, Nhà hát lớn Hà Nội, Bưu điện Hà Nội.
+                    </p>
+
+                    <p style="font-weight: bold;">Danh sách điểm dừng:</p>
+                </div>
+                
+                <div>
+                    <img class="image" src="buscitytour/buscitytour.jpg" alt="Bus City Tour">
+                </div>
+            </div>
+    
+            <div class="table">
+                <table>
+                    <tr>
+                        <th style="width: 4%; text-align: center;">STT</th>
+                        <th style="width: 46%; text-align: center;">Thông tin điểm dừng</th>
+                        <th style="width: 15%; font-size: inherit; text-align: center;">Âm thanh đọc điểm dừng</th>
+                        <th style="width: 35%; text-align: center;">Điểm tham quan tại điểm dừng</th>
+                    </tr>
+                    
+                    <tr>
+                        <td class="stt">1</td>
+                        <td class="stops alert alert-danger">Điểm đầu Quảng trường Đông Kinh Nghĩa Thục (Thứ 2 - Thứ 6) / Nhà hát lớn Hà Nội (Thứ 7 - Chủ Nhật)</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(0)"> </td>
+                        <td class="connectingroutes">Hồ Hoàn Kiếm - Khu phố cổ Hà Nội</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">2</td>
+                        <td class="stops alert alert-info">Số 4B Tràng Thi</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(1)"> </td>
+                        <td class="connectingroutes">Nhà Thờ Chính Toà Thánh Giesu</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">3</td>
+                        <td class="stops alert alert-info">Số 28A Điện Biên Phủ</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(2)"> </td>
+                        <td class="connectingroutes">Cột Cờ Hà Nội - Bảo tàng lịch sử quân sự Việt Nam</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">4</td>
+                        <td class="stops alert alert-info">Số 49 Điện Biên Phủ</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(3)"> </td>
+                        <td class="connectingroutes">Lăng Chủ Tịch - Bảo tàng Hồ Chí Minh - Chùa Một Cột - Tòa nhà Quốc Hội</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">5</td>
+                        <td class="stops alert alert-info">Điểm giao nhau đường Quán Thánh và Thanh Niên</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(4)"> </td>
+                        <td class="connectingroutes">Hồ Tây - Hồ Trúc Bạch - Đền Quán Thánh</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">6</td>
+                        <td class="stops alert alert-info">Đường Thanh Niên</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(5)"> </td>
+                        <td class="connectingroutes">Hồ Tây - Chùa Trấn Quốc</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">7</td>
+                        <td class="stops alert alert-info">Số 6 Hoàng Diệu</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(6)"> </td>
+                        <td class="connectingroutes">Nhà thờ Cửa Bắc</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">8</td>
+                        <td class="stops alert alert-info">Đối diện Hoàng Thành Thăng Long</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(7)"> </td>
+                        <td class="connectingroutes">Hoàng Thành Thăng Long</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">9</td>
+                        <td class="stops alert alert-info">Số 58 Quốc Tử Giám</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(8)"> </td>
+                        <td class="connectingroutes">Văn Miếu - Quốc Tử Giám</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">10</td>
+                        <td class="stops alert alert-info">Đối diện Số 52A Lý Thường Kiệt</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(9)"> </td>
+                        <td class="connectingroutes">Nhà Tù Hoả Lò - Chùa Quán Sứ</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">11</td>
+                        <td class="stops alert alert-info">Số 36 Lý Thường Kiệt</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(10)"> </td>
+                        <td class="connectingroutes">Bảo tàng Phụ Nữ Việt Nam</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">12</td>
+                        <td class="stops alert alert-info">Số 1 Tràng Tiền</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(11)"> </td>
+                        <td class="connectingroutes">Nhà hát lớn Hà Nội</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">13</td>
+                        <td class="stops alert alert-info">Số 75 Đinh Tiên Hoàng</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(12)"> </td>
+                        <td class="connectingroutes">Bưu điện Thành phố Hà Nội</td>
+                    </tr>
+                    <tr>
+                        <td class="stt">14</td>
+                        <td class="stops alert alert-danger">Điểm cuối Quảng trường Đông Kinh Nghĩa Thục (Thứ 2 - Thứ 6) / Nhà hát lớn Hà Nội (Thứ 7 - Chủ Nhật)</td>
+                        <td> <img class="playbutton" src="play_button.jpg" onclick="playaudio(13)"> </td>
+                        <td class="connectingroutes">Hồ Hoàn Kiếm - Khu phố cổ Hà Nội</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <footer>
+            <p>Trang web có sử dụng dữ liệu từ ứng dụng <a href="http://timbus.vn/">Tìm buýt</a> - ứng dụng theo dõi xe buýt của Tổng công ty vận tải Hà Nội.</p>
+        </footer>
+    </body>
+</html>
