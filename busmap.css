@@ -2,7 +2,7 @@ header
 {
     float: right;
     height: 50px;
-    font-size: 1.7vw;
+    font-size: 140%;
     position: fixed;
     z-index: 1;
     right: 0;
