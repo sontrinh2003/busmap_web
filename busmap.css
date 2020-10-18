@@ -1,8 +1,8 @@
 header
 {
     float: right;
-    height: 7.5vh;
-    font-size: 3.25vh;
+    height: 50px;
+    font-size: 20px;
     position: fixed;
     z-index: 1;
     right: 0;
@@ -160,7 +160,7 @@ footer
 {
     float: right;
     background-color: rgb(240, 236, 236);
-    height: 6.25vh;
+    height: 40px;
     width: 100%;
     padding-left: 20vw;
     margin-top: 8vh;
