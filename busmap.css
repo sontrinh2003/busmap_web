@@ -95,8 +95,8 @@ div#content
     float: right;
     width: 100%;
     padding-left: 22vw;
-    padding-bottom: 3em;
-    margin-right: 1em;
+    padding-bottom: 40px;
+    margin-right: 5px;
 }
 
 nav
@@ -142,7 +142,7 @@ div ul li a
 div ul li
 {
     margin-top: 10px;
-    margin-right: 1em;
+    margin-right: 15px;
     text-align: justify;
 }
 
@@ -150,7 +150,7 @@ div#sidebar h5
 {
     color: white;
     font-weight: bolder;
-    margin-top: 3em;
+    margin-top: 70px;
 }
 
 footer
@@ -167,7 +167,7 @@ footer
 footer p
 {
     color: gray;
-    margin-left: 2em;
+    margin-left: 30px;
     padding-top: 10px;
     font-size: 14px;
 }
