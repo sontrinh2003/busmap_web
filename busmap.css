@@ -2,7 +2,7 @@ header
 {
     float: right;
     height: 7.5vh;
-    font-size: 20px;
+    font-size: 3.25vh;
     position: fixed;
     z-index: 1;
     right: 0;
@@ -37,7 +37,7 @@ div div table
 div.table
 {
     float: none;
-    margin-top: 550px;
+    margin-top: 95vh;
 }
 
 .table td
@@ -52,7 +52,7 @@ div.table
     font-style: normal;
     font-size: large;
     border-bottom: 1.8px solid black;
-    padding: 15px;
+    padding: 2.3vh;
     vertical-align: middle;
     border-top: none;
 }
@@ -62,7 +62,7 @@ div.table
     max-width: 35px; 
     height: auto; 
     display: block;
-    margin-left: 25px;
+    margin-left: 2vw;
     cursor: pointer;
 }
 
@@ -70,7 +70,7 @@ h2
 {
     color: red;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 8vh;
 }
 
 .stt
@@ -162,7 +162,7 @@ footer
     height: 6.25vh;
     width: 100%;
     padding-left: 20vw;
-    margin-top: 50px;
+    margin-top: 8vh;
     bottom: 0;
 }
 
@@ -177,8 +177,8 @@ footer p
 p.lotrinh
 {
     text-align: justify; 
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-bottom: 3.25vh;
+    padding-top: 3.25vh;
 }
 
 div div button
