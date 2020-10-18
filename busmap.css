@@ -37,8 +37,6 @@ div div table::after
 div.table
 {
     clear: both;
-    display: flex;
-    padding-top: 90px;
 }
 
 .table td
@@ -97,7 +95,7 @@ div#content
     float: right;
     width: 100%;
     padding-left: 22vw;
-    padding-bottom: 5em;
+    padding-bottom: 3em;
     margin-right: 1em;
 }
 
@@ -115,7 +113,6 @@ div.routeinfo
     margin-top: 4.7vh;
     margin-bottom: 10px;
     width: 36vw;
-    height: 400px;
     font-size: 16px;
     text-align: justify;
 }
@@ -178,8 +175,8 @@ footer p
 p.lotrinh
 {
     text-align: justify; 
-    padding-bottom: 3.25vh;
-    padding-top: 3.25vh;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 div div button
