@@ -14,6 +14,7 @@ header p
 {
     margin-top: 8px;
     animation: marquee 18s linear infinite;
+    white-space: nowrap;
 }
 
 @keyframes marquee 
@@ -153,11 +154,11 @@ div#sidebar h5
 
 footer
 {
-    float: right;
+    float: left;
     background-color: rgb(240, 236, 236);
     height: 40px;
     width: 100%;
-    padding-left: 20vw;
+    margin-left: 20vw;
     margin-top: 8vh;
     bottom: 0;
 }
