@@ -28,14 +28,15 @@ function playaudio(i) {
     }
 }
 
-
+let but1 = document.querySelector('#departbutt');
+let but2 = document.querySelector('#returnbutt');
+let di = document.querySelectorAll('.depart');
+let ve = document.querySelectorAll('.return');
 
 function selectdepart() {
-    document.querySelector('#departbutt').style.backgroundColor = "darkgray";
-    document.querySelector('#returnbutt').style.backgroundColor = "lightgray";
-    
-    let di = document.querySelectorAll('.depart');
-    let ve = document.querySelectorAll('.return');
+    but1.style.backgroundColor = "darkgray";
+    but2.style.backgroundColor = "lightgray";
+
     for (let i = 0; i < di.length; i++)
     {
         di[i].style.display = "block";
@@ -53,11 +54,8 @@ function selectdepart() {
 }
 
 function selectreturn() {
-    document.querySelector('#departbutt').style.backgroundColor = "lightgray";
-    document.querySelector('#returnbutt').style.backgroundColor = "darkgray";
-    
-    let di = document.querySelectorAll('.depart');
-    let ve = document.querySelectorAll('.return');
+    but1.style.backgroundColor = "lightgray";
+    but2.style.backgroundColor = "darkgray";
     
     for (let i = 0; i < di.length; i++)
     {
