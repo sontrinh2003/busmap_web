@@ -6,27 +6,36 @@ function createaudio(url) {
 
 for (let i = 0; i <= urls.length; i++) createaudio(urls[i]);
 
+let playbut = document.querySelectorAll('.playbutton')
+
 function playaudio(i) {
     if (!audio[i].paused)
     {
         audio[i].pause();
         audio[i].currentTime = 0;
+        playbut[i].src = "play_button.jpg";
         return;
     }
     
-    for (j = 0; j < audio.length; j++)
+    for (let j = 0; j < audio.length; j++)
     {
         if (!audio[j].paused)
         {
             audio[j].pause();
             audio[j].currentTime = 0;
+            playbut[j].src = "play_button.jpg";
         }
         else
         {
             audio[i].play();
+            playbut[i].src = "stop_button.jpg";
+            audio[i].addEventListener('ended', function() {
+                playbut[i].src = "play_button.jpg"
+            });
         }
     }
 }
+
 
 let but1 = document.querySelector('#departbutt');
 let but2 = document.querySelector('#returnbutt');
