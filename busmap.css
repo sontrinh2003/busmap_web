@@ -13,14 +13,14 @@ header
 header p 
 {
     margin-top: 8px;
-    animation: marquee 20s linear infinite;
+    animation: marquee 25s linear infinite;
     white-space: nowrap;
 }
 
 @keyframes marquee 
 {
     0% { transform: translateX(100%); }
-    100% { transform: translateX(-110%); }
+    100% { transform: translateX(-130%); }
 }
 
 tr
