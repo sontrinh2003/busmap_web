@@ -93,7 +93,7 @@ div#sidebar
 
 div#sidebar img.symbol_image
 {
-    min-width: 21vw;
+    min-width: 20.5vw;
     height: auto;
     position: absolute;
     bottom: 15px;
