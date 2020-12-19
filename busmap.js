@@ -6,7 +6,6 @@ function createaudio(url) {
 
 for (let i = 0; i <= urls.length; i++) createaudio(urls[i]);
 
-
 let playbut = document.querySelectorAll('.playbutton');
 
 function playaudio(i) {
@@ -16,7 +15,7 @@ function playaudio(i) {
         audio[i].currentTime = 0;
         playbut[i].src = "play_button.jpg";
         return;
-    };
+    }
     
     for (let j = 0; j < audio.length; j++)
     {
@@ -34,8 +33,8 @@ function playaudio(i) {
                 playbut[i].src = "play_button.jpg"
             });
         }
-    };
-}
+    }
+};
 
 let but1 = document.querySelector('#departbutt');
 let but2 = document.querySelector('#returnbutt');
