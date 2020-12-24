@@ -13,15 +13,18 @@ header
 header p 
 {
     margin-top: 8px;
-    animation: marquee 65s linear infinite;
+    animation: marquee 45s linear infinite;
     white-space: nowrap;
+    overflow: visible;
 }
 
 @keyframes marquee 
 {
     0% {transform: translateX(100%);}
-    100% {transform: translateX(-400%);}
+    100% {transform: translateX(-550%);}
 }
+
+header p:hover {animation-play-state: paused;}
 
 tr
 {
