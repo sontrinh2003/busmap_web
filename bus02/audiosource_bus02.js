@@ -71,4 +71,8 @@ let urls = ['bus02/A0.mp3',
 'bus02/B30.mp3',
 'bus02/B31.mp3',
 'bus02/B32.mp3',
-'bus02/B33.mp3']
+'bus02/B33.mp3',
+
+'bus02/gavankhe.mp3',
+'bus02/gavanquan.mp3',
+'bus02/gaphungkhoang']
