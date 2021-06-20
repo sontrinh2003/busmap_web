@@ -53,10 +53,9 @@ div div table
 
 .playbutton
 {
-    max-width: 35px; 
+    max-width: 70px; 
     height: auto; 
-    display: block;
-    margin-left: 2vw;
+    padding-left: 25pt;
     cursor: pointer;
 }
 
