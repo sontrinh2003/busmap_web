@@ -36,26 +36,19 @@ div div table
     border-collapse: collapse;
 }
 
-div.table
-{
-    clear: both;
-}
-
 .table td
 {
     vertical-align: middle;
-    padding: 9px;
-    font-size: 16.5px;
 }
 
 .table th
 {
     font-style: normal;
-    font-size: large;
     border-bottom: 1.8px solid black;
     padding: 1.5px;
     vertical-align: middle;
     border-top: none;
+    font-size: 14pt;
 }
 
 .playbutton
@@ -142,7 +135,8 @@ img.image
 .stops
 {
     font-weight: bolder;
-    margin-bottom: 5px;
+    padding: 15px;
+    font-size: 12.5pt;
 }
 
 div ul li a 
@@ -203,9 +197,10 @@ div div button
     border: none;
 }
 
-.depart
+.stoplist
 {
     display: block;
+    clear: both;
 }
 
 .return
