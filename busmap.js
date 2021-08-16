@@ -13,7 +13,7 @@ function playaudio(i) {
     {
         audio[i].pause();
         audio[i].currentTime = 0;
-        playbut[i].src = "play_button.png";
+        playbut[i].src = "../play_button.png";
         return;
     }
     
@@ -23,14 +23,14 @@ function playaudio(i) {
         {
             audio[j].pause();
             audio[j].currentTime = 0;
-            playbut[j].src = "play_button.png";
+            playbut[j].src = "../play_button.png";
         }
         else
         {
             audio[i].play();
-            playbut[i].src = "stop_button.png";
+            playbut[i].src = "../stop_button.png";
             audio[i].addEventListener('ended', function() {
-                playbut[i].src = "play_button.png"
+                playbut[i].src = "../play_button.png"
             });
         }
     }
