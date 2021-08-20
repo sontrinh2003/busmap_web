@@ -92,8 +92,8 @@ img.symbol_image {
 
 div#content {
     float: right;
-    width: 78%;
-    margin: 0 20px 20px auto;
+    width: 75%;
+    margin: 0 15px 20px auto;
 }
 
 div.routeinfo {
@@ -117,7 +117,6 @@ img.image {
     padding: 15px;
     font-size: 12.5pt;
 }
-
 
 p.lotrinh {
     text-align: justify; 
