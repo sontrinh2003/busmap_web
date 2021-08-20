@@ -91,25 +91,27 @@ img.symbol_image {
 }
 
 div#content {
-    float: right;
-    width: 75%;
+    width: 76%;
     margin: 0 15px 20px auto;
 }
 
 div.routeinfo {
     float: left;
-    margin: 20px 20px 20px 35px;
-    width: 50%;
+    margin: 15px 0;
+    width: 46%;
     font-size: 16px;
     text-align: justify;
 }
 
-img.image {
-    max-width: 45%;
-    height: auto;
+div.busimage {
     float: right;
-    padding-top: 5vh;
-    display: block;
+    width: 45%;
+    margin-top: 40px;
+}
+
+div.busimage img {
+    width: 100%;
+    height: auto;
 }
 
 .stops {
@@ -171,7 +173,6 @@ thead th {
 .stoplist {
     display: block;
     clear: both;
-    margin: 10px;
 }
 
 .return {
